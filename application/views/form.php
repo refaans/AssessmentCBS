@@ -14,22 +14,22 @@
     
     <div class="container">
         <h2 class="alert text-warning text-center mt-3" >CBS ASSESMENT PREDICTION</h2>
-        <form action="">
+        <form action="" method="get">
             <div class="form-group">
                 <label for="" class="text-warning">Attendance</label>
-                <input type="number" name="att" class="form-control" >
+                <input type="number" name="att" placeholder="Attendance" class="form-control" >
             </div>
             <div class="form-group">
-                <label for=""class="text-warning">Cognitive</label>
-                <input type="number" name="kog" class="form-control" >
+                <label for="" class="text-warning">Cognitive</label>
+                <input type="number" name="kog" placeholder="Cognitive" class="form-control" >
             </div>
             <div class="form-group">
                 <label for="" class="text-warning">Psychomotor</label>
-                <input type="number" name="psi" class="form-control" >
+                <input type="number" name="psi" placeholder="Psychomotor" class="form-control" >
             </div>
             <div class="form-group">
                 <label for="" class="text-warning">Affective</label>
-                <input type="number" name="afe" class="form-control" >
+                <input type="number" name="afe" placeholder="Affective" class="form-control" >
             </div>
             <button type="result" class="btn btn-warning" name="predict_result">RESULT</button>
             <button type="reset" class="btn btn-danger">RESET</button>
