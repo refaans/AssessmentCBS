@@ -11,7 +11,7 @@
     <title>FORM</title>
   </head>
   <body background="assets/bg.jpg"  >
-    
+  background: url("bg.jpg");}
     <div class="container">
         <h2 class="alert text-warning text-center mt-3" >CBS ASSESMENT PREDICTION</h2>
         <form action="" method="get">
@@ -31,7 +31,30 @@
                 <label for="" class="text-warning">Affective</label>
                 <input type="number" name="afe" placeholder="Affective" class="form-control" >
             </div>
-            <button type="result" class="btn btn-warning" name="predict_result">RESULT</button>
+            <!-- Tombol untuk menampilkan modal-->
+            <button type="button" class="btn btn btn-warning" data-toggle="modal" data-target="#myModal">RESULT</button>
+          
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+                <!-- konten modal-->
+                <div class="modal-content">
+                  <!-- heading modal -->
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">CBS ASSESMENT PREDICTION</h4>
+                  </div>
+                  <!-- body modal -->
+                  <div class="modal-body">
+                    <p>bagian body modal.</p>
+                  </div>
+                  <!-- footer modal -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             <button type="reset" class="btn btn-danger">RESET</button>
         </form>
     </div>
