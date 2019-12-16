@@ -14,22 +14,22 @@
   background: url("bg.jpg");}
     <div class="container">
         <h2 class="alert text-warning text-center mt-3" >CBS ASSESMENT PREDICTION</h2>
-        <form action="" method="get">
+        <form action="<?php echo base_url() ?>controller/nbclassifier/nbc_proccess" method="post">
             <div class="form-group">
                 <label for="att" class="text-warning">Attendance</label>
-                <input type="number" name="att" placeholder="Attendance" class="form-control" >
+                <input type="number" name="att" class="form-control" >
             </div>
             <div class="form-group">
                 <label for="kog" class="text-warning">Cognitive</label>
-                <input type="number" name="kog" placeholder="Cognitive" class="form-control" >
+                <input type="number" name="kog" class="form-control" >
             </div>
             <div class="form-group">
                 <label for="psi" class="text-warning">Psychomotor</label>
-                <input type="number" name="psi" placeholder="Psychomotor" class="form-control" >
+                <input type="number" name="psi" class="form-control" >
             </div>
             <div class="form-group">
                 <label for="afe" class="text-warning">Affective</label>
-                <input type="number" name="afe" placeholder="Affective" class="form-control" >
+                <input type="number" name="afe" class="form-control" >
             </div>
             <!-- Tombol untuk menampilkan modal-->
             <button type="button" class="btn btn btn-warning" data-toggle="modal" data-target="#myModal">RESULT</button>
