@@ -8,27 +8,31 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>FORM</title>
+    <title>CBS ASSESSMENT PREDICTION</title>
   </head>
+<<<<<<< HEAD
   <body background="assets/bg.jpg"  >
+=======
+  <body style="background-image: url('assets/bg.jpg')">
+>>>>>>> b51686dddfda34dd8577a05836fe25deb93a6e25
     <div class="container">
         <h2 class="alert text-warning text-center mt-3" >CBS ASSESMENT PREDICTION</h2>
-        <form action="" method="get">
+        <form action="" method="post">
             <div class="form-group">
-                <label for="" class="text-warning">Attendance</label>
-                <input type="number" name="att" placeholder="Attendance" class="form-control" >
+                <label for="att" class="text-warning">Attendance</label>
+                <input type="number" name="att" class="form-control" >
             </div>
             <div class="form-group">
-                <label for="" class="text-warning">Cognitive</label>
-                <input type="number" name="kog" placeholder="Cognitive" class="form-control" >
+                <label for="kog" class="text-warning">Cognitive</label>
+                <input type="number" name="kog" class="form-control" >
             </div>
             <div class="form-group">
-                <label for="" class="text-warning">Psychomotor</label>
-                <input type="number" name="psi" placeholder="Psychomotor" class="form-control" >
+                <label for="psi" class="text-warning">Psychomotor</label>
+                <input type="number" name="psi" class="form-control" >
             </div>
             <div class="form-group">
-                <label for="" class="text-warning">Affective</label>
-                <input type="number" name="afe" placeholder="Affective" class="form-control" >
+                <label for="afe" class="text-warning">Affective</label>
+                <input type="number" name="afe" class="form-control" >
             </div>
             <!-- Tombol untuk menampilkan modal-->
             <button type="button" class="btn btn btn-warning" data-toggle="modal" data-target="#myModal">RESULT</button>
