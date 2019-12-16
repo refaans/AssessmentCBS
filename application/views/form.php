@@ -8,10 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>FORM</title>
+    <title>CBS ASSESSMENT PREDICTION</title>
   </head>
-  <body background="assets/bg.jpg"  >
-  background: url("bg.jpg");}
+  <body style="background-image: url('assets/bg.jpg')">
     <div class="container">
         <h2 class="alert text-warning text-center mt-3" >CBS ASSESMENT PREDICTION</h2>
         <form action="" method="post">

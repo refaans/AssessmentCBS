@@ -42,7 +42,7 @@ class M_datatest extends CI_Model{
 
 	//get all
 	function get_all(){
-		return $this->db->insert($this->table)->result();
+		return $this->db->get($this->table)->result();
 	}
 
 	public function get_parameter($parameter, $val_param, $status){
