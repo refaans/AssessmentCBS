@@ -11,7 +11,6 @@
     <title>FORM</title>
   </head>
   <body background="assets/bg.jpg"  >
-  background: url("bg.jpg");}
     <div class="container">
         <h2 class="alert text-warning text-center mt-3" >CBS ASSESMENT PREDICTION</h2>
         <form action="" method="get">
@@ -35,18 +34,38 @@
             <button type="button" class="btn btn btn-warning" data-toggle="modal" data-target="#myModal">RESULT</button>
           
             <!-- Modal -->
-            <div id="myModal" class="modal fade" role="dialog">
-              <div class="modal-dialog">
+            <div id="myModal" class="modal fade" role="dialog" background="text-warning">
+              <div class="modal-dialog modal-dialog-center">
                 <!-- konten modal-->
                 <div class="modal-content">
                   <!-- heading modal -->
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">CBS ASSESMENT PREDICTION</h4>
+                  <div class="modal-header text-center">
+                    <h4 class="modal-title"> CBS ASSESMENT PREDICTION </h4>
                   </div>
                   <!-- body modal -->
-                  <div class="modal-body">
-                    <p>bagian body modal.</p>
+                  <div class="form-group">
+                      <label for="" class="text-warning col-3">ID</label>
+                      <output_add_rewrite_var type="number" name="psi" placeholder="Psychomotor" class="form-control col-md-11">
+                  </div>
+                  <div class="form-group">
+                      <label for="" class="text-warning col-3">Attendance</label>
+                      <output_add_rewrite_var type="number" name="afe" placeholder="Affective" class="form-control col-11" >
+                  </div>
+                  <div class="form-group">
+                      <label for="" class="text-warning col-3">Cognitive</label>
+                      <output_add_rewrite_var type="number" name="psi" placeholder="Psychomotor" class="form-control col-11" >
+                  </div>
+                  <div class="form-group">
+                      <label for="" class="text-warning col-3">Psychomotor</label>
+                      <output_add_rewrite_var type="number" name="afe" placeholder="Affective" class="form-control col-11" >
+                  </div>
+                  <div class="form-group">
+                      <label for="" class="text-warning col-3">Affective</label>
+                      <output_add_rewrite_var type="number" name="afe" placeholder="Affective" class="form-control col-11" >
+                  </div>
+                  <div class="form-group">
+                      <label for="" class="text-warning col-3">Status</label>
+                      <output_add_rewrite_var type="number" name="afe" placeholder="Affective" class="form-control col-11" >
                   </div>
                   <!-- footer modal -->
                   <div class="modal-footer">
