@@ -106,3 +106,15 @@ class M_datatest extends CI_Model{
 		return $this->db->get($this->table)->row();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+/** code by refaans **/

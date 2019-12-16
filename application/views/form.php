@@ -56,27 +56,27 @@
                 <!-- body modal -->
                 <div class="form-group">
                     <label for="" class="text-warning col-3">ID</label>
-                    <output_add_rewrite_var type="number" name="psi" placeholder="Psychomotor" class="form-control col-md-11">
+                    <output_add_rewrite_var type="number" name="id" class="form-control col-md-11">
                 </div>
                 <div class="form-group">
                     <label for="" class="text-warning col-3">Attendance</label>
-                    <output_add_rewrite_var type="number" name="afe" placeholder="Affective" class="form-control col-11" >
+                    <output_add_rewrite_var type="number" name="att" class="form-control col-11" >
                 </div>
                 <div class="form-group">
                     <label for="" class="text-warning col-3">Cognitive</label>
-                    <output_add_rewrite_var type="number" name="psi" placeholder="Psychomotor" class="form-control col-11" >
+                    <output_add_rewrite_var type="number" name="kog" class="form-control col-11" >
                 </div>
                 <div class="form-group">
                     <label for="" class="text-warning col-3">Psychomotor</label>
-                    <output_add_rewrite_var type="number" name="afe" placeholder="Affective" class="form-control col-11" >
+                    <output_add_rewrite_var type="number" name="psi" class="form-control col-11" >
                 </div>
                 <div class="form-group">
                     <label for="" class="text-warning col-3">Affective</label>
-                    <output_add_rewrite_var type="number" name="afe" placeholder="Affective" class="form-control col-11" >
+                    <output_add_rewrite_var type="number" name="afe" class="form-control col-11" >
                 </div>
                 <div class="form-group">
                     <label for="" class="text-warning col-3">Status</label>
-                    <output_add_rewrite_var type="number" name="afe" placeholder="Affective" class="form-control col-11" >
+                    <output_add_rewrite_var type="number" name="status" class="form-control col-11" >
                 </div>
                 <!-- footer modal -->
                 <div class="modal-footer">
@@ -94,7 +94,7 @@
                   <!-- body modal -->
                   <div class="form-group">
                       <label for="" class="text-warning col-3">ID</label>
-                      <output_add_rewrite_var type="number" name="id"="form-control col-md-11">
+ " name="id"="form-control col-md-11">
                   </div>
                   <div class="form-group">
                       <label for="" class="text-warning col-3">Attendance</label>

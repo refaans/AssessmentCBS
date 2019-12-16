@@ -32,9 +32,8 @@ class NBClassifier extends CI_Controller{
 
 		if ($validation->run()){
 			$data_test->save();
-			$this->session->set_flashdata('success', 'Save Succed');
+			$this->session->set_flashdata('success', 'Save Succeed');
 		}
-		
 		$this->load->view('form');
 	}
 
@@ -125,3 +124,20 @@ class NBClassifier extends CI_Controller{
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** code by refaans **/
