@@ -7,12 +7,12 @@ class NBClassifier extends CI_Controller{
 	
 	function __construct(){
 		parent::__construct();
-		$this->load->model('m_nbclassifier');
+		// $this->load->model('m_nbclassifier');
 		$this->load->model('m_datatest');
 		$this->load->library('form_validation');
 	}
 
-	public function index{
+	function index(){
 		$data = array(
 			'id'	=> set_value('id'),
 			'att'	=> set_value('att'),
@@ -39,25 +39,25 @@ class NBClassifier extends CI_Controller{
 		if ($data['att'] >= 75){
 			$data['att'] = '1';
 		} else {
-			$data['att' = '0';]
+			$data['att'] = '0';
 		}
 
 		if ($data['kog'] >= 87){
 			$data['kog'] = '1';
 		} else {
-			$data['kog' = '0';]
+			$data['kog'] = '0';
 		}
 
 		if ($data['psi'] >= 87){
 			$data['psi'] = '1';
 		} else {
-			$data['psi' = '0';]
+			$data['psi'] = '0';
 		}
 
 		if ($data['afe'] >= 87){
 			$data['afe'] = '1';
 		} else {
-			$data['afe' = '0';]
+			$data['afe'] = '0';
 		}
 
 		//probability attendance

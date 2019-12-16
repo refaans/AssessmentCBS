@@ -14,7 +14,7 @@
   background: url("bg.jpg");}
     <div class="container">
         <h2 class="alert text-warning text-center mt-3" >CBS ASSESMENT PREDICTION</h2>
-        <form action="<?php echo base_url() ?>controller/nbclassifier/nbc_proccess" method="post">
+        <form action="" method="post">
             <div class="form-group">
                 <label for="att" class="text-warning">Attendance</label>
                 <input type="number" name="att" class="form-control" >

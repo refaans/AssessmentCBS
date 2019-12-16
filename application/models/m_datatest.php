@@ -16,33 +16,53 @@ class M_datatest extends CI_Model{
 		parent::__construct();
 	}
 
-	public function rules(){
-		return[
-			['field'	=> 'id'
-			'label'		=> 'ID'
-			'rules'		=> 'required']
+	// public function rules(){
+	// 	return[
+	// 		['field'	=> 'id'
+	// 		'label'		=> 'ID'
+	// 		'rules'		=> 'required'],
 
-			['field'	=> 'att'
-			'label'		=> 'Attendance'
-			'rules'		=> 'required']
+	// 		['field'	=> 'att'
+	// 		'label'		=> 'Attendance'
+	// 		'rules'		=> 'required'],
 
-			['field'	=> 'kog'
-			'label'		=> 'Cognitive'
-			'rules'		=> 'required']
+	// 		['field'	=> 'kog'
+	// 		'label'		=> 'Cognitive'
+	// 		'rules'		=> 'required'],
 
-			['field'	=> 'psi'
-			'label'		=> 'Psychomotor'
-			'rules'		=> 'required']
+	// 		['field'	=> 'psi'
+	// 		'label'		=> 'Psychomotor'
+	// 		'rules'		=> 'required'],
 
-			['field'	=> 'afe'
-			'label'		=> 'Affective'
-			'rules'		=> 'required']
-		];
-	}
+	// 		['field'	=> 'afe'
+	// 		'label'		=> 'Affective'
+	// 		'rules'		=> 'required']
+	// 	];
+	// }
 
 	//get all
 	function get_all(){
-		return $this->db->get($this->table)->result();
+		return $this->db->insert($this->table)->result();
+	}
+
+	public function get_parameter($parameter, $val_param, $status){
+
+		//count 
+		$check_prob = "
+			SELECT count(status) from nilai where $parameter = '$val_param' and status = $status ";
+
+		//apply laplace corection if probability = 0	
+		if ($check_prob == 0){
+			$sql = "
+				SELECT (SELECT (count(status)+1) from nilai where $parameter = '$val_param' and status ='$status')/(count(status)+2) as the_result from nilai where status = '$status' ";
+		} else{
+			$sql = "
+				SELECT (SELECT count(status) from nilai where $parameter = '$val_param' and status ='$status')/count(status) as the_result from nilai where status = '$status' ";
+		}
+
+		$query = $this->db->query($sql);
+		return $query->row();
+
 	}
 
 	public function add(){
@@ -52,7 +72,7 @@ class M_datatest extends CI_Model{
 
 		if ($validation->run()){
 			$product->save();
-			$this->session->set_flashdata('success', 'Save Succed')
+			$this->session->set_flashdata('success', 'Save Succed');
 		}
 		
 		$this->load->view('form');
