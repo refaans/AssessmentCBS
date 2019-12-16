@@ -25,6 +25,19 @@ class NBClassifier extends CI_Controller{
 		$this->load->view('form', $data);
 	}
 
+	public function add(){
+		$data_test = $this->m_datatest;
+		$validation = $this->form_validation;
+		$validation->set_rules($data_test->rules());
+
+		if ($validation->run()){
+			$data_test->save();
+			$this->session->set_flashdata('success', 'Save Succed');
+		}
+		
+		$this->load->view('form');
+	}
+
 	//count probability
 	public function nbc_process(){
 		$data = array(
@@ -34,6 +47,8 @@ class NBClassifier extends CI_Controller{
 			'psi'	=> $this->input->post('psi'),
 			'afe'	=> $this->input->post('afe')
 		);
+
+		$this->db->add($data);
 
 		//convert from int to boolean
 		if ($data['att'] >= 75){
@@ -93,5 +108,20 @@ class NBClassifier extends CI_Controller{
 		$data["lulus"] = $result_lulus;
 		$data["gagal"] = $result_gagal;
 		$data["prediction"] = $prediction;
+
+		$data_status = array(
+			'status'	=> $this->input->post('prediction')
+		);
+
+		$this->db->add($data_status);
+
+	}
+
+	public function print_result($prediction){
+		if ($prediction == 1){
+			echo "Lulus";
+		} else{
+			echo "Tidak Lulus";
+		}
 	}
 }
