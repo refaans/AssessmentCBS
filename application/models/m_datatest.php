@@ -16,33 +16,37 @@ class M_datatest extends CI_Model{
 		parent::__construct();
 	}
 
-	// public function rules(){
-	// 	return[
-	// 		['field'	=> 'id'
-	// 		'label'		=> 'ID'
-	// 		'rules'		=> 'required'],
+	public function rules(){
+		return[
+			['field'	=> 'id',
+			'label'		=> 'ID',
+			'rules'		=> 'required'],
 
-	// 		['field'	=> 'att'
-	// 		'label'		=> 'Attendance'
-	// 		'rules'		=> 'required'],
+			['field'	=> 'att',
+			'label'		=> 'Attendance',
+			'rules'		=> 'required'],
 
-	// 		['field'	=> 'kog'
-	// 		'label'		=> 'Cognitive'
-	// 		'rules'		=> 'required'],
+			['field'	=> 'kog',
+			'label'		=> 'Cognitive',
+			'rules'		=> 'required'],
 
-	// 		['field'	=> 'psi'
-	// 		'label'		=> 'Psychomotor'
-	// 		'rules'		=> 'required'],
+			['field'	=> 'psi',
+			'label'		=> 'Psychomotor',
+			'rules'		=> 'required'],
 
-	// 		['field'	=> 'afe'
-	// 		'label'		=> 'Affective'
-	// 		'rules'		=> 'required']
-	// 	];
-	// }
+			['field'	=> 'afe',
+			'label'		=> 'Affective',
+			'rules'		=> 'required']
+		];
+	}
 
 	//get all
 	function get_all(){
 		return $this->db->get($this->table)->result();
+	}
+
+	function get_by_id(){
+		return $this->db->get_where($this->table, ['id' => $id])->row();
 	}
 
 	public function get_parameter($parameter, $val_param, $status){
@@ -65,31 +69,18 @@ class M_datatest extends CI_Model{
 
 	}
 
-	public function add(){
-		$data_test = $this->m_datatest;
-		$validation = $this->form_validation;
-		$validation->set_rules($data_test->rules());
 
-		if ($validation->run()){
-			$product->save();
-			$this->session->set_flashdata('success', 'Save Succed');
-		}
-		
-		$this->load->view('form');
+	// insert/save data
+	function save(){
+		$post = $this->input->post();
+
+		$this->id = $post['id'];
+		$this->att = $post['att'];
+		$this->kog = $post['kog'];
+		$this->psi = $post['psi'];
+		$this->afe = $post['afe'];
+		$this->db->insert($this->table, $this);
 	}
-
-
-	// // insert/save data
-	// function save(){
-	// 	$post = $this->input->post();
-
-	// 	$this->id = $post['id'];
-	// 	$this->att = $post['att'];
-	// 	$this->kog = $post['kog'];
-	// 	$this->psi = $post['psi'];
-	// 	$this->afe = $post['afe'];
-	// 	$this->db->insert($this->table, $this);
-	// }
 
 	function insert($data){
 		$this->db->insert($data);
